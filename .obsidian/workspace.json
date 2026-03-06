@@ -1,0 +1,277 @@
+{
+  "main": {
+    "id": "e42d326f699b9a21",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e5161a70e9b387a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "567fc1577f657d25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "examples/EditText.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EditText"
+            }
+          },
+          {
+            "id": "b065d12dbf4b4dfe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "examples/Switch.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Switch"
+            }
+          },
+          {
+            "id": "2fc2691465b13e3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "examples/ProgressBar.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ProgressBar"
+            }
+          },
+          {
+            "id": "bcdca8c7a60362dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "examples/Spinner.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Spinner"
+            }
+          },
+          {
+            "id": "e7aeac24f5ce4cf0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "examples/TimePicker.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TimePicker"
+            }
+          },
+          {
+            "id": "ce354557358ae542",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2d7f224637a12306",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e453011d9d0bb24",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf735902c85f45b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a07941e0b5942543",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ee3ad2e8be625262",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a12c4f65923db381",
+    "type": "split",
+    "children": [
+      {
+        "id": "a38fadf3936cf4bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d66609d7f0ec1d29",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "button_exercise.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for button_exercise"
+            }
+          },
+          {
+            "id": "793293765bafeeba",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TextView.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from TextView"
+            }
+          },
+          {
+            "id": "850ea720c1d95234",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6c61abb74e5f109f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TextView.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of TextView"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ce354557358ae542",
+  "lastOpenFiles": [
+    "examples/View.md",
+    "examples/ToggleButton.md",
+    "examples/TimePicker.md",
+    "examples/TextView.md",
+    "examples/Switch.md",
+    "examples/Spinner.md",
+    "examples/RadioButton.md",
+    "examples/ProgressBar.md",
+    "examples/ImageView.md",
+    "examples/ImageButton.md",
+    "examples/EditText.md",
+    "examples/CheckBox.md",
+    "examples/Button.md",
+    "examples/AutoCompleteTextView.md",
+    "exercise/TextView modern exercise.md",
+    "exercise/TextView exerscse.md",
+    "exercise/Switch modern exercise.md",
+    "exercise/Switch exercise.md",
+    "exercise/RadioButton modern exercise.md",
+    "exercise/RadioButton exercise.md",
+    "exercise/ProgressBar modern exercise.md",
+    "exercise/ProgressBar exercise.md",
+    "exercise/ImageButton modern exercise.md",
+    "exercise/ImageButton exercise.md",
+    "exercise/EditText modern exercise.md",
+    "exercise/EditText exercise.md",
+    "Pasted image 20260305140004.png",
+    "Pasted image 20260305134645.png",
+    "Pasted image 20260305133118.png",
+    "Pasted image 20260305132211.png",
+    "Pasted image 20260305132059.png"
+  ]
+}
