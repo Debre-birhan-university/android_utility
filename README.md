@@ -22,7 +22,7 @@ The `examples` folder contains standalone reference guides and snippets for vari
 - [[View]]
 - [[DatePicker]] (in root)
 
-### 2. Exercises -- to be released
+### 2. Exercises 
 The `exercise` folder contains hands-on labs designed to test your knowledge of the components taught in the examples. It includes both legacy View implementations and modern Material Design 3 approaches.
 
 To get started with the exercises, please visit the central learning hub:
