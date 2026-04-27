@@ -58,4 +58,5 @@
     <string name="pins_dont_match">PINs do not match. Try again.</string>
     <string name="pin_created_successfully">PIN created successfully!</string>
     <string name="save_pin">Save PIN</string>
+    <string name="invalid_pin">Invalid PIN. Please try again.</string>
 </resources>

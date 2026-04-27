@@ -30,7 +30,8 @@ fun LoginScreen(
     onHeadphonesClick: () -> Unit = {},
     onLanguageClick: () -> Unit = {},
     onResetPinClick: () -> Unit = {},
-    onSignInClick: (String) -> Unit = {}
+    onSignInClick: (String) -> Unit = {},
+    isError: Boolean = false
 ) {
     var pin by remember { mutableStateOf("") }
     val darkBlue = Color(0xFF002D72)
@@ -164,6 +165,18 @@ fun LoginScreen(
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center
         )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        if (isError) {
+            Text(
+                text = stringResource(id = R.string.invalid_pin),
+                color = Color.Red,
+                fontSize = 14.sp,
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center
+            )
+        }
 
         Spacer(modifier = Modifier.height(40.dp))
 
