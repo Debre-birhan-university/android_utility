@@ -1,12 +1,9 @@
-package org.debrebirhan.dashen
+﻿package org.debrebirhan.dashen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,78 +13,104 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.debrebirhan.dashen.ui.theme.DashenBerhanTheme
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ContactUsScreen(
+    modifier: Modifier = Modifier,
     onBackClick: () -> Unit = {},
     onShortCodeClick: () -> Unit = {},
     onEmailClick: () -> Unit = {},
     onWebsiteClick: () -> Unit = {}
 ) {
     val darkBlue = Color(0xFF002D72)
+    val lightGray = Color(0xFF8E8E93)
 
     Scaffold(
+        modifier = modifier.fillMaxSize(),
+        containerColor = Color.White,
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(id = R.string.contact_us), color = Color.White) },
-                navigationIcon = {
-                    IconButton(onClick = onBackClick) {
-                        Icon(
-                            imageVector = Icons.Default.ArrowBack,
-                            contentDescription = "Back",
-                            tint = Color.White
-                        )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = darkBlue)
-            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp, start = 8.dp, end = 16.dp, bottom = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                IconButton(onClick = onBackClick) {
+                    Icon(
+                        painter = painterResource(id = R.drawable.ic_back),
+                        contentDescription = "Back",
+                        tint = Color.Black
+                    )
+                }
+                Text(
+                    text = stringResource(id = R.string.contact_us),
+                    style = MaterialTheme.typography.titleLarge,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black
+                )
+            }
         }
     ) { innerPadding ->
         Column(
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
-                .background(Color.White)
-                .padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(horizontal = 24.dp)
         ) {
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             ContactItem(
-                iconId = R.drawable.ic_phone,
+                iconRes = R.drawable.ic_phone,
                 label = stringResource(id = R.string.short_code),
                 value = stringResource(id = R.string.short_code_value),
                 onClick = onShortCodeClick,
-                darkBlue = darkBlue
+                iconColor = darkBlue,
+                labelColor = lightGray,
+                valueColor = darkBlue
             )
 
+            Spacer(modifier = Modifier.height(32.dp))
+
             ContactItem(
-                iconId = R.drawable.ic_email,
+                iconRes = R.drawable.ic_email,
                 label = stringResource(id = R.string.email),
                 value = stringResource(id = R.string.email_value),
                 onClick = onEmailClick,
-                darkBlue = darkBlue
+                iconColor = darkBlue,
+                labelColor = lightGray,
+                valueColor = darkBlue
             )
 
+            Spacer(modifier = Modifier.height(32.dp))
+
             ContactItem(
-                iconId = R.drawable.ic_globe,
+                iconRes = R.drawable.ic_globe,
                 label = stringResource(id = R.string.website),
                 value = stringResource(id = R.string.website_value),
                 onClick = onWebsiteClick,
-                darkBlue = darkBlue
+                iconColor = darkBlue,
+                labelColor = lightGray,
+                valueColor = darkBlue
             )
 
             Spacer(modifier = Modifier.weight(1f))
 
+            SocialMediaSection(backgroundColor = darkBlue)
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             Text(
                 text = stringResource(id = R.string.contact_footer_text),
-                fontSize = 14.sp,
-                color = Color.Gray,
+                style = MaterialTheme.typography.bodyMedium,
+                color = lightGray,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(bottom = 32.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 32.dp)
             )
         }
     }
@@ -95,44 +118,100 @@ fun ContactUsScreen(
 
 @Composable
 fun ContactItem(
-    iconId: Int,
+    iconRes: Int,
     label: String,
     value: String,
     onClick: () -> Unit,
-    darkBlue: Color
+    iconColor: Color,
+    labelColor: Color,
+    valueColor: Color,
+    modifier: Modifier = Modifier
 ) {
-    Surface(
-        onClick = onClick,
-        modifier = Modifier
+    Row(
+        modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        shape = RoundedCornerShape(12.dp),
-        color = Color(0xFFF8F9FA)
+            .clickable(onClick = onClick),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Row(
-            modifier = Modifier.padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+        Icon(
+            painter = painterResource(id = iconRes),
+            contentDescription = null,
+            tint = iconColor,
+            modifier = Modifier.size(28.dp)
+        )
+
+        Spacer(modifier = Modifier.width(20.dp))
+
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = label,
+                fontSize = 14.sp,
+                color = labelColor
+            )
+            Text(
+                text = value,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold,
+                color = valueColor
+            )
+        }
+
+        Icon(
+            painter = painterResource(id = R.drawable.ic_chevron_right),
+            contentDescription = null,
+            tint = Color.Black,
+            modifier = Modifier.size(24.dp)
+        )
+    }
+}
+
+@Composable
+fun SocialMediaSection(
+    modifier: Modifier = Modifier,
+    backgroundColor: Color
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        val icons = listOf(
+            R.drawable.ic_telegram,
+            R.drawable.ic_facebook,
+            R.drawable.ic_instagram,
+            R.drawable.ic_linkedin,
+            R.drawable.ic_x,
+            R.drawable.ic_tiktok,
+            R.drawable.ic_youtube
+        )
+
+        icons.forEachIndexed { index, iconRes ->
             Box(
                 modifier = Modifier
-                    .size(48.dp)
-                    .background(darkBlue.copy(alpha = 0.1f), CircleShape),
+                    .size(36.dp)
+                    .background(color = backgroundColor, shape = CircleShape)
+                    .clickable { },
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
-                    painter = painterResource(id = iconId),
+                    painter = painterResource(id = iconRes),
                     contentDescription = null,
-                    tint = darkBlue,
-                    modifier = Modifier.size(24.dp)
+                    tint = Color.White,
+                    modifier = Modifier.size(20.dp)
                 )
             }
 
-            Spacer(modifier = Modifier.width(16.dp))
-
-            Column {
-                Text(text = label, fontSize = 12.sp, color = Color.Gray)
-                Text(text = value, fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
+            if (index < icons.size - 1) {
+                Spacer(modifier = Modifier.width(12.dp))
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ContactUsScreenPreview() {
+    DashenBerhanTheme {
+        ContactUsScreen()
     }
 }
