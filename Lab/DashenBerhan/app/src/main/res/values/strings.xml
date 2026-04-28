@@ -25,11 +25,11 @@
     <string name="lang_oromoo">Afaan Oromoo</string>
     <string name="lang_somali">Soomaali</string>
     <string name="lang_tigrinya">ትግርኛ</string>
-    <string name="hello_user">Hello Estifanos</string>
+    <string name="hello_user">Hello Betelhem</string>
     <string name="welcome_back_compact">Welcome Back!</string>
-    <string name="account_name">Estifanos Abebaw Teshome</string>
-    <string name="account_balance">0000.00 ETB</string>
-    <string name="account_number">5000000000000</string>
+    <string name="account_name">Betelhem Worku Sebsebe</string>
+    <string name="account_balance">10000.00 ETB</string>
+    <string name="account_number">10000000066777</string>
     <string name="accounts">Accounts</string>
     <string name="send_to_dashen">Send To Dashen</string>
     <string name="send_to_other">Send To Other (IPS)</string>
@@ -59,4 +59,8 @@
     <string name="pin_created_successfully">PIN created successfully!</string>
     <string name="save_pin">Save PIN</string>
     <string name="invalid_pin">Invalid PIN. Please try again.</string>
+    <string name="exercise_text_1">Breaking News: Android Developers are in High tension because of AI!</string>
+    <string name="exercise_text_2">666 Birr</string>
+    <string name="exercise_text_3"> terms and agreement</string>
+
 </resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading Dashboard..."
+        android:textSize="20sp"
+        android:textColor="#002D72"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Indeterminate circular progress bar -->
+    <ProgressBar
+        android:id="@+id/circular_progress"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:indeterminate="true"
+        android:indeterminateTint="#002D72"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetching data: 75%"
+        android:textSize="14sp"
+        android:textColor="#808080"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Horizontal progress bar tracking completion -->
+    <ProgressBar
+        android:id="@+id/horizontal_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="75"
+        android:progressTint="#002D72" />
+
+</LinearLayout>

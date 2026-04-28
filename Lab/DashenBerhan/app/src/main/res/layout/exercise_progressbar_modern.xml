@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modern Loading Screen"
+        android:textSize="22sp"
+        android:textColor="#002D72"
+        android:fontWeight="700"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Indeterminate Circular Progress (Material 3) -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/modern_circular_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="#002D72"
+        app:indicatorSize="64dp"
+        app:trackThickness="6dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="System Update: 75%"
+        android:textSize="14sp"
+        android:textColor="#808080"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Determinate Horizontal Progress (Material 3) -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/modern_linear_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="75"
+        app:indicatorColor="#002D72"
+        app:trackColor="#E0E0E0"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="8dp" />
+
+</LinearLayout>

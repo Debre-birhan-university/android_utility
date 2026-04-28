@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material 3 Buttons"
+            android:textSize="26sp"
+            android:textColor="#002D72"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Filled button (Default M3) -->
+        <Button
+            android:id="@+id/modern_btn_filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filled Action (Primary)"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Elevated button -->
+        <Button
+            android:id="@+id/modern_btn_elevated"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elevated Action"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tonal button -->
+        <Button
+            android:id="@+id/modern_btn_tonal"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tonal Action"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Outlined button -->
+        <Button
+            android:id="@+id/modern_btn_outlined"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outlined Action"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Text button -->
+        <Button
+            android:id="@+id/modern_btn_text"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Text Action"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
