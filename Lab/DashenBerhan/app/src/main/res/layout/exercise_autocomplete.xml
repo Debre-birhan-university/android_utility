@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Cities"
+        android:textSize="20sp"
+        android:textColor="#002D72"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Standard AutoCompleteTextView -->
+    <AutoCompleteTextView
+        android:id="@+id/auto_complete_cities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"
+        android:hint="Type a city name..."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Bank Branch"
+        android:textSize="20sp"
+        android:textColor="#002D72"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Customized AutoCompleteTextView -->
+    <AutoCompleteTextView
+        android:id="@+id/auto_complete_branches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="2"
+        android:hint="Search branch..."
+        android:textColor="#194CB0"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:dropDownHeight="200dp"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

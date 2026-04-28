@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button Variations"
+        android:textSize="24sp"
+        android:textColor="#002D72"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Contained Button -->
+    <Button
+        android:id="@+id/btn_contained"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contained Button"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Outlined Button -->
+    <Button
+        android:id="@+id/btn_outlined"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Outlined Button"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Text Button -->
+    <Button
+        android:id="@+id/btn_text"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Button"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

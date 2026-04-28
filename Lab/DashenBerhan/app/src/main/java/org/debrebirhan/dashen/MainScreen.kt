@@ -30,7 +30,8 @@ fun LoginScreen(
     onHeadphonesClick: () -> Unit = {},
     onLanguageClick: () -> Unit = {},
     onResetPinClick: () -> Unit = {},
-    onSignInClick: (String) -> Unit = {}
+    onSignInClick: (String) -> Unit = {},
+    isError: Boolean = false
 ) {
     var pin by remember { mutableStateOf("") }
     val darkBlue = Color(0xFF002D72)
@@ -46,7 +47,7 @@ fun LoginScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 12.dp),
+                .padding(horizontal = 16.dp, vertical = 4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
@@ -134,23 +135,23 @@ fun LoginScreen(
             }
         }
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
         // Logo
         Image(
             painter = painterResource(id = R.drawable.dashen_logo),
             contentDescription = "Dashen Bank Logo",
             modifier = Modifier
-                .height(100.dp)
+                .height(60.dp)
                 .align(Alignment.CenterHorizontally)
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
         // Welcome Text
         Text(
             text = stringResource(id = R.string.welcome_back),
-            fontSize = 36.sp,
+            fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
             color = darkBlue,
             modifier = Modifier.fillMaxWidth(),
@@ -165,7 +166,19 @@ fun LoginScreen(
             textAlign = TextAlign.Center
         )
 
-        Spacer(modifier = Modifier.height(40.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+
+        if (isError) {
+            Text(
+                text = stringResource(id = R.string.invalid_pin),
+                color = Color.Red,
+                fontSize = 14.sp,
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center
+            )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
 
         // PIN Indicator
         Row(
@@ -176,7 +189,7 @@ fun LoginScreen(
             repeat(6) { index ->
                 Box(
                     modifier = Modifier
-                        .size(56.dp)
+                        .size(48.dp)
                         .padding(4.dp)
                         .border(1.dp, Color.LightGray, RoundedCornerShape(12.dp))
                         .background(Color.White, RoundedCornerShape(12.dp)),
@@ -193,7 +206,8 @@ fun LoginScreen(
             }
         }
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+
 
         Text(
             text = stringResource(id = R.string.show_pin),
@@ -205,7 +219,8 @@ fun LoginScreen(
                 .clickable { /* Toggle PIN visibility */ }
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+
 
         Row(
             modifier = Modifier.fillMaxWidth(),

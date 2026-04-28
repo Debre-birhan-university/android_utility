@@ -1,5 +1,4 @@
-package org.debrebirhan.dashen
-
+﻿package org.debrebirhan.dashen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -29,11 +28,10 @@ fun ContactUsScreen(
 ) {
     val darkBlue = Color(0xFF002D72)
     val lightGray = Color(0xFF8E8E93)
-    val backgroundColor = Color.White
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
-        containerColor = backgroundColor,
+        containerColor = Color.White,
         topBar = {
             Row(
                 modifier = Modifier
@@ -75,7 +73,7 @@ fun ContactUsScreen(
                 valueColor = darkBlue
             )
 
-            Spacer(modifier = Modifier.height(48.dp))
+            Spacer(modifier = Modifier.height(32.dp))
 
             ContactItem(
                 iconRes = R.drawable.ic_email,
@@ -87,7 +85,7 @@ fun ContactUsScreen(
                 valueColor = darkBlue
             )
 
-            Spacer(modifier = Modifier.height(48.dp))
+            Spacer(modifier = Modifier.height(32.dp))
 
             ContactItem(
                 iconRes = R.drawable.ic_globe,
@@ -141,7 +139,9 @@ fun ContactItem(
             tint = iconColor,
             modifier = Modifier.size(28.dp)
         )
+
         Spacer(modifier = Modifier.width(20.dp))
+
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = label,
@@ -155,6 +155,7 @@ fun ContactItem(
                 color = valueColor
             )
         }
+
         Icon(
             painter = painterResource(id = R.drawable.ic_chevron_right),
             contentDescription = null,
@@ -189,7 +190,7 @@ fun SocialMediaSection(
                 modifier = Modifier
                     .size(36.dp)
                     .background(color = backgroundColor, shape = CircleShape)
-                    .clickable { /* Handle click */ },
+                    .clickable { },
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -199,6 +200,7 @@ fun SocialMediaSection(
                     modifier = Modifier.size(20.dp)
                 )
             }
+
             if (index < icons.size - 1) {
                 Spacer(modifier = Modifier.width(12.dp))
             }

@@ -27,10 +27,10 @@ fun Numpad(
         columns = GridCells.Fixed(3),
         modifier = Modifier
             .fillMaxWidth()
-            .padding(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        contentPadding = PaddingValues(bottom = 16.dp)
+            .padding(horizontal = 8.dp, vertical = 2.dp),
+        horizontalArrangement = Arrangement.spacedBy(4.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+        contentPadding = PaddingValues(bottom = 4.dp)
     ) {
         items(keys) { key ->
             when (key) {
@@ -88,7 +88,7 @@ fun NumpadButton(
         onClick = onClick,
         modifier = Modifier
             .fillMaxWidth()
-            .height(84.dp),
+            .height(64.dp),
         shape = RoundedCornerShape(8.dp),
         color = containerColor
     ) {
